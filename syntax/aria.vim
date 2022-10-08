@@ -1,6 +1,7 @@
 syn keyword ariaTodos TODO FIXME NOTE
 
 syn region ariaString start=/"/ skip=/\\"/ end=/"/ oneline
+syn region ariaCharacter start=/'/ skip=/\\'/ end=/'/ oneline
 
 syn region ariaCommentLine start="//" end="$" contains=ariaTodos
 
@@ -12,29 +13,30 @@ syn keyword ariaKeywords
 	\ else 
 	\ while
 	\ for
-	\ let
-	\ const 
+    \ switch
+    \ imm
 	\ mut
-	\ pub
 	\ fn
 	\ struct
-	\ error
-	\ module
 	\ and
 	\ or
+    \ not
     \ as
+    \ in
+    \ continue
+    \ break
+	\ defer
+	\ return
+	\ extern
+    \ Self
+    \ self
+
+syn keyword ariaConstants
     \ true
     \ false
     \ null
-	\ try
-	\ defer
-	\ errdefer
-	\ return
-	\ import
-	\ export
-	\ extern
 
-syn match ariaDirective "\v\@(import|if|compile_error)"
+syn match ariaDirective "\v\@(import)"
 
 syn keyword ariaBuiltinTypes 
 	\ u8
@@ -60,3 +62,5 @@ hi default link ariaBuiltinTypes Type
 hi default link ariaNumber Number
 hi default link ariaString String
 hi default link ariaCommentLine Comment
+hi default link ariaConstants Constant
+hi default link ariaCharacter Character
