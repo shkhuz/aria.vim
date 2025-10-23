@@ -26,6 +26,7 @@ syn keyword ariaKeywords
     \ Self
     \ self
     \ yield
+    \ import
 
 syn keyword ariaConstants
     \ true
