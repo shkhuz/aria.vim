@@ -18,11 +18,6 @@ syn keyword ariaKeywords
 	\ mut
 	\ fn
 	\ struct
-	\ and
-	\ or
-    \ not
-    \ as
-    \ in
     \ continue
     \ break
 	\ defer
@@ -30,13 +25,14 @@ syn keyword ariaKeywords
 	\ extern
     \ Self
     \ self
+    \ yield
 
 syn keyword ariaConstants
     \ true
     \ false
     \ null
 
-syn match ariaDirective "\v\@(import)"
+syn match ariaDirective "\v\%[^(]+"
 
 syn keyword ariaBuiltinTypes 
 	\ u8
