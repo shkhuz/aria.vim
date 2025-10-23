@@ -27,6 +27,7 @@ syn keyword ariaKeywords
     \ self
     \ yield
     \ import
+    \ type
 
 syn keyword ariaConstants
     \ true
