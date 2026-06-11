@@ -20,13 +20,8 @@ syn keyword ariaKeywords
 	\ struct
     \ continue
     \ break
-	\ defer
 	\ return
 	\ extern
-    \ Self
-    \ self
-    \ yield
-    \ import
     \ type
 
 syn keyword ariaConstants
@@ -34,7 +29,7 @@ syn keyword ariaConstants
     \ false
     \ null
 
-syn match ariaDirective "\v\%[^(]+"
+syn match ariaDirective "\v\@[^(]+"
 
 syn keyword ariaBuiltinTypes 
 	\ u8
